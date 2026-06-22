@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "TimeTab",
+  "version": "1.0.0",
+  "description": "Snooze tabs and have them reopen automatically at a time you choose.",
+  "permissions": ["storage", "alarms", "activeTab"],
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Snooze this tab",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "options_page": "options/options.html",
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  }
+}

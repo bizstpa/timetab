@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TimeTab</title>
+    <link rel="stylesheet" href="../styles/theme.css" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="app-title">
+        <h1>TimeTab</h1>
+        <p class="tagline">Snooze this tab for later.</p>
+      </div>
+      <div
+        class="seg compact theme-control"
+        id="theme-control"
+        role="group"
+        aria-label="Appearance"
+      >
+        <button type="button" class="seg-btn" data-theme-choice="system">Auto</button>
+        <button type="button" class="seg-btn" data-theme-choice="light">Light</button>
+        <button type="button" class="seg-btn" data-theme-choice="dark">Dark</button>
+      </div>
+    </header>
+
+    <section class="group">
+      <h2 class="group-title">Snooze for</h2>
+      <div class="preset-grid cols-3" id="snooze-for"></div>
+    </section>
+
+    <section class="group">
+      <h2 class="group-title">Snooze until</h2>
+      <div class="preset-grid cols-1" id="snooze-until"></div>
+    </section>
+
+    <section class="group">
+      <h2 class="group-title">Custom</h2>
+
+      <div
+        class="seg mode-toggle"
+        id="mode-toggle"
+        role="group"
+        aria-label="Custom snooze mode"
+      >
+        <button type="button" class="seg-btn active" data-mode="absolute">
+          Pick date &amp; time
+        </button>
+        <button type="button" class="seg-btn" data-mode="relative">In…</button>
+      </div>
+
+      <div class="custom-inputs" id="custom-absolute">
+        <input type="datetime-local" id="custom-datetime" />
+      </div>
+
+      <div class="custom-inputs" id="custom-relative" hidden>
+        <label class="field">
+          <span>Hours</span>
+          <input type="number" id="custom-hours" min="0" max="72" value="0" />
+        </label>
+        <label class="field">
+          <span>Minutes</span>
+          <input type="number" id="custom-minutes" min="0" max="59" value="0" />
+        </label>
+      </div>
+
+      <button type="button" class="btn-primary" id="custom-snooze">Snooze</button>
+    </section>
+
+    <p id="status" role="status"></p>
+
+    <footer class="app-footer">
+      <button type="button" id="manage" class="link">Manage snoozed tabs</button>
+    </footer>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

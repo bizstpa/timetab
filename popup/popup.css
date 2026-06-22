@@ -1,0 +1,159 @@
+body {
+  width: 360px;
+  margin: 0;
+  padding: var(--sp-3);
+}
+
+.app-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-3);
+}
+
+.app-title h1 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.tagline {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: var(--text-3);
+}
+
+.theme-control.compact {
+  flex: 0 0 auto;
+}
+
+.group {
+  margin-bottom: var(--sp-3);
+}
+
+.group-title {
+  margin: 0 0 var(--sp-2);
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-3);
+}
+
+.preset-grid {
+  display: grid;
+  gap: var(--sp-2);
+}
+
+.preset-grid.cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.preset-grid.cols-1 {
+  grid-template-columns: 1fr;
+}
+
+.preset-grid button {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  background: var(--surface);
+  border: none;
+  border-radius: var(--r-control);
+  box-shadow: var(--shadow-1);
+  padding: 9px 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.12s ease, transform 0.06s ease;
+}
+
+.preset-grid.cols-1 button {
+  text-align: left;
+}
+
+.preset-grid button:hover {
+  background: var(--surface-hover);
+}
+
+.preset-grid button:active {
+  transform: scale(0.98);
+}
+
+.mode-toggle {
+  margin-bottom: var(--sp-2);
+}
+
+.custom-inputs {
+  display: flex;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-2);
+}
+
+.field {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 11px;
+  color: var(--text-2);
+}
+
+.btn-primary {
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  width: 100%;
+  color: var(--on-accent);
+  background: var(--accent);
+  border: none;
+  border-radius: var(--r-control);
+  box-shadow: var(--shadow-1);
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.12s ease, transform 0.06s ease;
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn-primary:active {
+  transform: scale(0.99);
+}
+
+#status {
+  margin: var(--sp-2) 0;
+  min-height: 16px;
+  font-size: 12px;
+  text-align: center;
+  color: var(--text-2);
+}
+
+#status.error {
+  color: var(--danger);
+}
+
+.app-footer {
+  margin-top: var(--sp-2);
+  padding-top: var(--sp-2);
+  border-top: 1px solid var(--separator);
+  text-align: center;
+}
+
+.link {
+  font: inherit;
+  font-size: 12px;
+  color: var(--text-2);
+  background: none;
+  border: none;
+  border-radius: 6px;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: var(--accent);
+}
